@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+   <header>
+
+   </header>
+   <router-link to="/"><h2>Famíglia Mancini</h2></router-link>
+ 
+ <router-link :to="{name:'cadastro'}"><p>Cadastre um novo prato</p></router-link>
+
+   
+ <router-view></router-view>
   </div>
 </template>
 
+<script>
+export default{
+  name: "app"
+}
+
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+header{
+  display: inline;
 }
 
-#nav {
-  padding: 30px;
+a{
+  text-decoration: none;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+h2{
+  text-align:center
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

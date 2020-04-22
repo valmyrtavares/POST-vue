@@ -1,0 +1,36 @@
+{
+  "dados": [
+    {
+      "id": "Raviolli",
+      "nome": "Raviolli ao Presto",
+      "preco": 300,
+      "caracteristicas": "duas pessoas",
+      "descricao": "Este prato é prepardo em fogo baixo tem ingredientes frescos, que justificam o seu valor Muitas vezes o tempo de preparo é extendido por causa de umidade e temperaturas correntes, o que o cliente deve estar abolutamente ciente, e sem pressa para degustar de joelhos",
+      "imagem": "https://img.itdg.com.br/tdg/images/recipes/000/022/505/264567/264567_original.jpg?mode=crop&width=710&height=400"
+    },
+    {
+      "nome": " Risoto à carbonara",
+      "preco": "90",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "m panela grande, derreta 1 colher (sopa) da manteiga em fogo médio (reserve o restante na geladeira) e frite o bacon até dourar. Retire e reserve.",
+      "imagem": "https://www.cozinhandopara2ou1.com.br/wp-content/uploads/2016/04/RisotoACarbonara_CozinhandoPara2ou1-600x315-cropped.jpg",
+      "id": "PkOvkz3"
+    },
+    {
+      "nome": " Salmão Assado",
+      "preco": "100",
+      "caracteristicas": "Rendimento: 6 porções",
+      "descricao": "  Salmão Assado por CyberCook salmao-assado por Alessandra Rodrigues salmao-assado-1 por CyberCook Enviar uma foto desta receita Esta receita traz uma forma muito fácil, porém saborosa, de preparar o salmão assado. Temperos simples e poucos passos conferem ao paladar o sabor delicado do salmão.",
+      "imagem": "https://img.cybercook.com.br/receitas/749/salmao-assado-2.jpeg",
+      "id": "mhU0_4O"
+    },
+    {
+      "nome": "Feijão com Arroz",
+      "preco": "20",
+      "caracteristicas": "Serve 4 pessoas",
+      "descricao": "Na cozinha brasileira, o tradicional feijão com arroz nunca sai de moda, quanto mais tradicional melhor, e se tiver aquele bife, purê de batata feito com manteiga e um pouco de leite, é mais que perfeito. O prato acima é o resultado do trabalho do chef Thiago",
+      "imagem": "https://www.nidelins.com.br/wp-content/uploads/2015/12/blog-mestre-cuca3.jpg",
+      "id": "gTfS5rN"
+    }
+  ]
+}
