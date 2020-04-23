@@ -7,23 +7,18 @@
             <input type="text" name="caracteristicas" v-model="pratos.caracteristicas" placeholder="caracteristicas">
             <input type="text" name="descricao" v-model="pratos.descricao" placeholder="descricao">
             <input type="text" name="imagem" v-model="pratos.imagem" placeholder="imagem">
-            <button @click.prevent="adicionaMenu">Prato</button>
-             <button @click.prevent="adicionaBd">Banco de Dados</button>
-
+             <button @click.prevent="adicionaBd">Cadastrar Prato</button>
         </form>
-        
-       
+        <router-link :to="{name:'novaRota'}">teste nova rota</router-link>
     </div>
-
 </template>
+            
 <script>
-// import { api } from '@/mixins/fetchData.js'
+ import { api } from '@/mixins/fetchData.js'
     export default{
         name:"Cadastro",
-      
         data(){
             return{
-               
                 pratos:{
                     nome:"",
                     preco:0,
@@ -31,24 +26,21 @@
                     descricao:"",
                     imagem:""
             }
-
             }
         },
         methods:{
-            adicionaMenu(){
-                this.$store.commit("UPDATE_PRATOS", this.pratos)
-            },
             adicionaBd(){
-                
-                this.$store.dispatch("adicionarPrato", this.pratos)
-                
+                //Opção de post via componente
+                api.post("/dados", this.pratos)
+                //Opção de post via store
+               // this.$store.dispatch("adicionarPrato", this.pratos)
+                this.$router.push("/")
             }
-               
-        }
-      
+        },
     }
 </script>
 <style>
+       
 form{
     margin-left:20px;
 }
@@ -68,3 +60,17 @@ button{
     background: #9d00ff75
 }
 </style>
+           
+
+        
+       
+
+      
+      
+               
+
+           
+                
+               
+        
+      
