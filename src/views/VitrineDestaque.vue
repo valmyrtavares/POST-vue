@@ -1,17 +1,22 @@
 <template>
-  <div>
+  <section>
    
-    <main>
-      <button @click="DeletarPrato(fetch.id)">x</button>
-      <router-link :to="{name:'EditarPratos',params:{ editar :fetch}}">
-        <h2>{{fetch.nome}}</h2>
-      </router-link>
-      <p>Valor {{fetch.preco}}</p>
-      <p>Serve {{fetch.caracteristicas}}</p>
-    </main>
-    <p>{{fetch.descricao}}</p>
-    <img :src="fetch.imagem" />
-  </div>
+    
+        <main>
+          <button @click="DeletarPrato(fetch.id)">x</button>
+          <router-link :to="{name:'EditarPratos',params:{ editar :fetch}}">
+            <h2>{{fetch.nome}}</h2>
+          </router-link>
+          <p>Valor {{fetch.preco}}</p>
+          <p>Serve {{fetch.caracteristicas}}</p>
+        </main>
+        <p>{{fetch.descricao}}</p>
+        <img :src="fetch.imagem" />
+   
+    
+     
+
+  </section>
 </template>
 
 <script>
@@ -30,7 +35,7 @@ export default {
     DeletarPrato(id) {
       const confirmar = window.confirm("Deseja realmente remover esse item");
       if (confirmar) {
-        api.delete(`/dados/${id}`);
+        api.delete(`/${this.$store.state.route}/${id}`);
         this.$router.push("/");
         // }
       }
@@ -61,5 +66,13 @@ button {
   background: white;
   border-radius: 15px;
   cursor: pointer;
+}
+section{
+  position: relative;
+  animation: vitrine 1s ;
+}
+@keyframes vitrine {
+  from{left:30px; opacity: 0;}
+  to{left:0px; opacity: 1;}
 }
 </style>

@@ -6,6 +6,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    route:"",
+    clientScreen:false,
+
     pratoEspeciais:{
       nome:"",
       preco:0,
@@ -17,6 +20,12 @@ export default new Vuex.Store({
   mutations: {
     UPDATE_PRATOS(state, payload){
       state.pratoEspeciais = payload
+    },
+    CHANGE_ROUTE(state, payload){
+      state.route = payload
+    },
+    CHANGE_CLIENT_SCREEN(state, payload){
+      state.clientScreen = payload
     }
   },
   actions: {
