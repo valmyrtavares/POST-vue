@@ -1,15 +1,19 @@
 <template>
   <section>
-      <h2>Gourmet</h2>
+     
          <div v-for="(item, index) in PratosGerais" :key="index">
+              <router-link :to="{name:'novaRota',params:{fetch: item}}">
           <main>
             <h2>{{item.nome}}</h2>
             <p>Valor {{item.preco}}</p>
             <p>Serve {{item.caracteristicas}}</p>
           </main>
+           </router-link>
+             <router-link :to="{name:'novaRota',params:{fetch: item}}">
           <p>{{item.descricao}}</p>
+           </router-link>
           <router-link :to="{name:'novaRota',params:{fetch: item}}">
-            <img :src="item.imagem" />
+            <img class="increase" :src="item.imagem" />
           </router-link>
         </div>
   </section>
@@ -24,9 +28,15 @@ export default {
 </script>
 
 <style scoped>
+section{
+  background:rgba(0,0,0,.3);
+  width:100%;
+  height:200vh;
+
+}
 div {
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background:rgb(230, 232, 230);
   display: grid;
   grid-template-columns: 3fr 6fr 3fr;
   align-items: center;

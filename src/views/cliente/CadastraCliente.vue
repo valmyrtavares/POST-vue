@@ -1,57 +1,81 @@
 <template>
-  <div>
-      <h1>Novo Clientes</h1>
-      <form >
-        <button class="btn-close-screen">x</button>
-        <label for="name">Nome </label>
-      <input type="text" name="nome" v-model="newCostumer.name">
-       <label for="numeroMesa">Numero da Mesa</label>
-      <input type="number" name="numeroMesa" v-model="newCostumer.tableNumber">
+  <div class="transicao-geral">
+    <h2>Novo Clientes</h2>
+    <button @click="closeScreen" class="btn-close-screen">x</button>
+    <form>
+      <label for="name">Nome</label>
+      <input type="text" name="nome" v-model="newCostumer.name" />
+      <label for="numeroMesa">Numero da Mesa</label>
+      <input type="number" name="numeroMesa" v-model="newCostumer.tableNumber" />
       <label for="numeroMesa">Pedido</label>
-      <input type="number" name="numeroMesa" v-model="newCostumer.request">
-       <label for="numeroMesa">Quatidade de Pessoas por mesa</label>
-      <input type="number" name="numeroMesa" v-model="newCostumer.numCostumer">
-      <button @click.prevent="createCostumer">criar Cliente</button>
-
-
-      </form>
+      <input type="number" name="numeroMesa" v-model="newCostumer.request" />
+      <label for="numeroMesa">Quatidade de Pessoas por mesa</label>
+      <input type="number" name="numeroMesa" v-model="newCostumer.numCostumer" />
+      <button @click.prevent="createCostumer">Criar Cliente</button>
+    </form>
   </div>
 </template>
-
-<script>
-import {api} from '@/mixins/fetchData'
-export default {
-   name:"novoCliente",
- 
-   data(){
-     return{
-       newCostumer:{
-         name:"",
-         request:0,
-         tableNumber:0,
-         numCostumer: 0
-       }
-     }
-   },
-   methods:{
-     createCostumer(){
-       api.post("/costumer", this.newCostumer)
-        this.closeScreen()
-    },
-    closeScreen(){
-      this.$store.commit("CHANGE_CLIENT_SCREEN", false)
-    }
    
+<script>
+import { api } from "@/mixins/fetchData";
+export default {
+  name: "novoCliente",
+
+  data() {
+    return {
+      newCostumer: {
+        name: "",
+        request: 0,
+        tableNumber: 0,
+        numCostumer: 0
+      }
+    };
+  },
+  methods: {
+    createCostumer() {
+     this.validacaoCadastro();
+      api.post("/costumer", this.newCostumer);
+      this.$router.push("/clientes");
+    },
+    closeScreen() {
+      this.$router.push("/");
+      // this.$store.commit("CHANGE_CLIENT_SCREEN", false)
+    },
+    CheckUser(){
+      if(this.$store.state.logado){
+        this.$router.push("/cadastraCliente")
+      }else{
+        this.$router.push("/login")
+      }
+    },
+    validacaoCadastro(){
+      if(this.newCostumer.name===""){
+        alert("O compo de nome não pode ficar em branco")
+        throw true;}
+          if(this.newCostumer.request===0){
+        alert("O número da mesa não pode ser zero")
+        throw true;}
+          if(this.newCostumer.tableNumber===0){
+        alert("O número do não pode ser zero")
+        throw true;}
+          if(this.newCostumer.numCostumer===0){
+        alert("O número de clientes por mesa não pode ser igual a zero")
+        throw true;}
+      }
+    },
+  
+  beforeRouteEnter:(to, from, next)=>{
+    next(vm=>{
+      vm.CheckUser()
+    })
   }
-      
-
-
-
-
-}
+};
 </script>
 
 <style scoped>
+h2 {
+  text-align: center;
+}
 div {
   width: 75%;
   background: rgba(0, 0, 0, 0.2);
@@ -60,13 +84,29 @@ div {
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
   margin: 10px auto;
 }
-.btn-close-screen{
-  position: relative;
-    top: -77px;
-    left: 532px;
+
+form {
+  margin: 20px 100px;
 }
- 
-
-
-
+button {
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.btn-close-screen {
+  font-size: 40px;
+}
 </style>
+
+
+   
+
+   
+      
+
+
+
+
+
+
+

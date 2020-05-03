@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Cadastro from '@/views/Cadastro.vue'
+import CadastroPratos from '@/views/CadastroPratos.vue'
 import Vitrine from "@/views/Vitrine.vue"
 import VitrineDestaque from '@/views/VitrineDestaque.vue'
 import EditarPratos from '@/views/EditarPratos.vue'
@@ -10,6 +10,9 @@ import Carnes from '@/views/Pratos/Carnes.vue'
  import Peixes from '@/views/Pratos/Peixes.vue'
 import ClienteAtivo from "@/views/cliente/clienteAtivo.vue"
  import Clientes from "@/views/cliente/clientesEmTransito.vue"
+ import CadastroClientes from "@/views/cliente/CadastraCliente.vue"
+ import CadastroUsuario from "@/views/cliente/CadastroUsuario.vue"
+ import Login from "@/components/telaLogin.vue"
 
  Vue.use(VueRouter)
  
@@ -19,7 +22,7 @@ import ClienteAtivo from "@/views/cliente/clienteAtivo.vue"
      name: "vitrine",
      component:Vitrine,
      props:true,
-     children:[
+      children:[
        {
          path:"massas",
          name: "massa",
@@ -45,7 +48,7 @@ import ClienteAtivo from "@/views/cliente/clienteAtivo.vue"
     {
     path:"/cadastro",
     name:"cadastro",
-    component:Cadastro
+    component:CadastroPratos
   },
    {
      path:":fetch",
@@ -60,15 +63,33 @@ import ClienteAtivo from "@/views/cliente/clienteAtivo.vue"
    props:true
   },
   {
+    path:"/cadastraCliente",
+    name: "cadastraCliente",
+    component:CadastroClientes
+  },
+  {
+    path:"/admin",
+    name: "administrador",
+    component:CadastroUsuario,
+  },
+    
+      {
+      path:"/login",
+      name:"login",
+      component:Login
+    },
+    
+  {
     path:"/clientes",
     name:"clientes",
     component: Clientes,
+    props:true,
     children:[
       {
         path: ":ativo",
         name:"clienteAtivo",
         component: ClienteAtivo,
-        props:true
+        props:true,
        
       }
      ]

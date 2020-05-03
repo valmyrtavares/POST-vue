@@ -7,7 +7,10 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     route:"",
+    menu:false,
     clientScreen:false,
+    usuarioLogado:true,
+    logado:"",
 
     pratoEspeciais:{
       nome:"",
@@ -18,6 +21,9 @@ export default new Vuex.Store({
 }
   },
   mutations: {
+    LOGAR_USUARIO(state, payload){
+      state.logado = payload
+    },
     UPDATE_PRATOS(state, payload){
       state.pratoEspeciais = payload
     },
@@ -26,6 +32,12 @@ export default new Vuex.Store({
     },
     CHANGE_CLIENT_SCREEN(state, payload){
       state.clientScreen = payload
+    },
+    CLOSE_MENU(state, payload){
+      state.menu = payload
+    },
+    OPEN_MENU(state, payload){
+      state.menu = payload
     }
   },
   actions: {
