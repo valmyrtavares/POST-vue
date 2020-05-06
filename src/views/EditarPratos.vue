@@ -1,6 +1,7 @@
 <template>
     <section>
         <h2>Editar Pratos</h2>
+        <button class="btn-close-screen" @click.prevent="sairDaTela">x</button>
       
             <form>
                 <input type="text" name="nome" v-model="editar.nome" placeholder="nome">
@@ -46,6 +47,9 @@ export default {
         // }
       }
     },
+    sairDaTela(){
+        this.$router.push("/")
+    }
    },
    beforeRouteEnter:(to, from, next)=>{
        next(vm=>{

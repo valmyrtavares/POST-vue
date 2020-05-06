@@ -4,29 +4,28 @@
       <h1>Cliente Ativos</h1>
 
       <div class="cliente-ativo">
-        {{ativo}}
         <p>
           Nome:
           <span>{{client.name}}</span>
         </p>
         <p>
           Pedido
-          <span>{{client.request}}</span>
+          <span>{{client.id}}</span>
         </p>
         <p>
           Numero da mesa
-          <span>{{client.tableNumber}}</span>
+          <span>{{client.table}}</span>
         </p>
-        <p>
-          Clientes por mesa
-          <span>{{client.numCostumer}}</span>
-        </p>
-        <ul v-for="(prato, index) in Pedidos" :key="index">
+
+       
+        <ul v-for="(prato, index) in client.pedidosFeitos" :key="index">
           <li>Prato {{prato.nome}}</li>
           <li>Valor {{prato.preco}}</li>
         </ul>
+       <valorTotalConta :total="client"></valorTotalConta>
       </div>
 
+     
       <form>
         <input type="number" v-model="prato" />
         <select id="select" v-model="tipo">
@@ -37,6 +36,8 @@
         </select>
         <input type="submit" value="busca" @click.prevent="buscaProduto" />
       </form>
+
+     
     </div>
   </section>
 </template>
@@ -44,16 +45,27 @@
 
 <script>
 import { api } from "@/mixins/fetchData.js";
+import valorTotalConta from "@/components/valorTotalConta.vue"
+
 export default {
   name: "clinteAtivo",
+  components:{
+    valorTotalConta
+  },
   props: ["ativo"],
   data() {
     return {
+     
       client: null,
       tipo: "",
       prato: "",
       buscaPrato: null,
-      Pedidos: []
+      pedido: {
+        id: "",
+        name: "",
+        table: "",
+        pedidosFeitos: []
+      }
     };
   },
   computed: {
@@ -62,24 +74,39 @@ export default {
     }
   },
   methods: {
-    async buscaProduto() {
-      await api.get(this.url).then(r => (this.buscaPrato = r.data));
-      await this.organizaProdutos(this.buscaPrato);
-    },
-    organizaProdutos(prod) {
-      this.Pedidos.unshift(prod);
-    },
-
     atualizandoCliente() {
-      api.get(`/costumer/${this.ativo}`).then(r => {
+      api.get(`/pedido/${this.ativo}`).then(r => {
         this.client = r.data;
       });
+    },
+
+    async buscaProduto() {
+      await api.get(this.url).then(r => (this.buscaPrato = r.data));
+      await this.atualizandoPedido();
+      await this.insereNovoPratoArray(this.buscaPrato);
+      await api.put(`/pedido/${this.client.id}`, this.pedido);
+      this.pedido.pedidosFeitos = [];
+      
+    },
+
+
+    atualizandoPedido() {
+      this.pedido.id = this.client.id;
+      this.pedido.name = this.client.name;
+      this.pedido.table = this.client.table;
+      this.pedido.pedidosFeitos = this.client.pedidosFeitos;
+    },
+
+    insereNovoPratoArray(prod) {
+      this.pedido.pedidosFeitos.unshift(prod);
     }
   },
   watch: {
     ativo() {
       this.atualizandoCliente();
-    }
+    },
+  
+   
   },
   created() {
     this.atualizandoCliente();
@@ -102,9 +129,10 @@ h1 {
 input {
   max-width: 100px;
   height: 40px;
+  border: solid 1px black;
 }
-li{
-  margin:0px;
+li {
+  margin: 0px;
 }
 </style>
          

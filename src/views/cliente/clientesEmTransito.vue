@@ -4,13 +4,13 @@
      
       <button @click="irPaginaCadastrarCliente" class="btn-standart">Cadastre um novo Cliente</button>
       <ul v-for="(costumer, index) in AllCostumers" :key="index">
-        <router-link :to="{name:'clienteAtivo',params:{ativo:costumer.id}}">
+        <router-link :to="{name:'clienteAtivo',params:{ativo:costumer.request}}">
           <li>Nome do Cliente: <span>{{costumer.name}}</span></li>
         </router-link>
         <li>Número da Mesa: Mesa {{costumer.tableNumber}}</li>
         <li>Quantidade de Clientes: {{costumer.numCostumer}} Pessoas</li>
         <li>Pedidos {{costumer.request}}</li>
-        <button class="btn-close-screen" @click="deleteCostumer(costumer.id, costumer.name)">x</button>
+        <button class="btn-close-screen" @click="deleteCostumer(costumer.id, costumer.name, costumer.request)">x</button>
       </ul>
     </div>
     <router-view></router-view>
@@ -28,15 +28,16 @@ export default {
   },
   methods: {
     getCostumers() {
-      console.log("Foi");
+    
       api.get("/costumer").then(r => {
         this.AllCostumers = r.data;
       });
     },
-    async deleteCostumer(id, nome) {
+    async deleteCostumer(id, nome, pedido) {
       const confirmar = window.confirm(`Deseja realmente excluir o Sr/Sra ${nome}`)
       if(confirmar)
       await api.delete(`/costumer/${id}`);
+       await api.delete(`/pedido/${pedido}`);
       await this.getCostumers();
     },
     irPaginaCadastrarCliente(){

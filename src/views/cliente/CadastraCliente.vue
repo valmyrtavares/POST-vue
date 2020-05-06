@@ -27,19 +27,26 @@ export default {
         name: "",
         request: 0,
         tableNumber: 0,
-        numCostumer: 0
-      }
+        numCostumer: 0,
+       
+      },
+       pedido:{
+          id:"",
+          name:"",
+          table: "",
+         pedidosFeitos:[]
+       }
     };
   },
   methods: {
-    createCostumer() {
+    async createCostumer() {
      this.validacaoCadastro();
-      api.post("/costumer", this.newCostumer);
+     await api.post("/costumer", this.newCostumer);
+      await this.createRequest()
       this.$router.push("/clientes");
     },
     closeScreen() {
       this.$router.push("/");
-      // this.$store.commit("CHANGE_CLIENT_SCREEN", false)
     },
     CheckUser(){
       if(this.$store.state.logado){
@@ -61,6 +68,16 @@ export default {
           if(this.newCostumer.numCostumer===0){
         alert("O número de clientes por mesa não pode ser igual a zero")
         throw true;}
+      },
+      preparaPedido(){
+        this.pedido.id = this.newCostumer.request;
+        this.pedido.name = this.newCostumer.name;
+        this.pedido.table = this.newCostumer.tableNumber;
+        
+      },
+      createRequest(){
+        this.preparaPedido();
+        api.post("/pedido", this.pedido)
       }
     },
   

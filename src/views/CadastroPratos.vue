@@ -22,6 +22,9 @@
       </select>
 
       <button class="btn-standart btn-cadastro-pratos" @click.prevent="adicionaBd">Cadastrar Prato</button>
+
+      <!-- <button v-if="isAlteracao" >Excluir</button> -->
+
     </form>
 
   </section>
@@ -31,8 +34,10 @@
  import { api } from "@/mixins/fetchData.js";
 export default {
   name: "Cadastro",
+  
   data() {
     return {
+     
       pratos: {
         nome: "",
         preco: 0,
@@ -60,12 +65,12 @@ export default {
     this.$router.push("/")
   },
   CheckUser(){
-    console.log("Vou cadastrar um prato")
     if(this.$store.state.logado){
       this.$router.push("/cadastro")
     }else{
       this.$router.push("/login")
     }
+   
 
   }
   },
@@ -73,7 +78,8 @@ export default {
     next(vm=>{
       vm.CheckUser()
     })
-  }    
+  },
+  
 };
 
     

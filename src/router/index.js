@@ -13,10 +13,16 @@ import ClienteAtivo from "@/views/cliente/clienteAtivo.vue"
  import CadastroClientes from "@/views/cliente/CadastraCliente.vue"
  import CadastroUsuario from "@/views/cliente/CadastroUsuario.vue"
  import Login from "@/components/telaLogin.vue"
+ import teste from "@/components/TestePost.vue"
 
  Vue.use(VueRouter)
  
    const routes = [
+    {
+      path:"/teste",
+      name:"teste",
+      component:teste
+    },
    {
      path:"/",
      name: "vitrine",
