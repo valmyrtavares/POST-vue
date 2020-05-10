@@ -28,13 +28,14 @@ export default {
         request: 0,
         tableNumber: 0,
         numCostumer: 0,
-       
+        
       },
        pedido:{
           id:"",
           name:"",
           table: "",
-         pedidosFeitos:[]
+         pedidosFeitos:[],
+         valorTotal: 0
        }
     };
   },

@@ -6,6 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    valorTotal:0,
     route:"",
     menu:false,
     clientScreen:false,
@@ -21,6 +22,9 @@ export default new Vuex.Store({
 }
   },
   mutations: {
+    ATUALIZANDO_TOTALBILL(state, payload){
+      state.valorTotal = payload
+    },
     LOGAR_USUARIO(state, payload){
       state.logado = payload
     },

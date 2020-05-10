@@ -1,36 +1,262 @@
 {
-  "dados": [
+  "massas": [
     {
-      "id": "Raviolli",
-      "nome": "Raviolli ao Presto",
-      "preco": 300,
-      "caracteristicas": "duas pessoas",
-      "descricao": "Este prato é prepardo em fogo baixo tem ingredientes frescos, que justificam o seu valor Muitas vezes o tempo de preparo é extendido por causa de umidade e temperaturas correntes, o que o cliente deve estar abolutamente ciente, e sem pressa para degustar de joelhos",
-      "imagem": "https://img.itdg.com.br/tdg/images/recipes/000/022/505/264567/264567_original.jpg?mode=crop&width=710&height=400"
-    },
-    {
-      "nome": " Risoto à carbonara",
-      "preco": "90",
-      "caracteristicas": "Serve duas pessoas",
-      "descricao": "m panela grande, derreta 1 colher (sopa) da manteiga em fogo médio (reserve o restante na geladeira) e frite o bacon até dourar. Retire e reserve.",
-      "imagem": "https://www.cozinhandopara2ou1.com.br/wp-content/uploads/2016/04/RisotoACarbonara_CozinhandoPara2ou1-600x315-cropped.jpg",
-      "id": "PkOvkz3"
+      "nome": " CyberCook Capeletti à napolitana",
+      "preco": "55",
+      "caracteristicas": "Serve quatro pessoas",
+      "descricao": "Cozinhe o capeletti na agua fervente mexendo de vez em quando , até ficar al dente. em uma panela refogue e cebola no azeite até murchar junte os tomates o manjericão e o sal deixe ferver por cerca de de 5 min.Adicione a mussarela , as azeitonas misture e retire do fogo . coloque o capeletti numa travessa e sirva com o molho.",
+      "imagem": "https://img.cybercook.com.br/imagens/receitas/124/capeletti-a-napolitana-623x350.jpg",
+      "id": "2"
     },
     {
       "nome": " Salmão Assado",
-      "preco": "100",
-      "caracteristicas": "Rendimento: 6 porções",
-      "descricao": "  Salmão Assado por CyberCook salmao-assado por Alessandra Rodrigues salmao-assado-1 por CyberCook Enviar uma foto desta receita Esta receita traz uma forma muito fácil, porém saborosa, de preparar o salmão assado. Temperos simples e poucos passos conferem ao paladar o sabor delicado do salmão.",
+      "preco": "120",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "Esta receita traz uma forma muito fácil, porém saborosa, de preparar o salmão assado. Temperos simples e poucos passos conferem ao paladar o sabor delicado do salmão.",
       "imagem": "https://img.cybercook.com.br/receitas/749/salmao-assado-2.jpeg",
-      "id": "mhU0_4O"
+      "id": "3"
     },
     {
-      "nome": "Feijão com Arroz",
-      "preco": "20",
-      "caracteristicas": "Serve 4 pessoas",
-      "descricao": "Na cozinha brasileira, o tradicional feijão com arroz nunca sai de moda, quanto mais tradicional melhor, e se tiver aquele bife, purê de batata feito com manteiga e um pouco de leite, é mais que perfeito. O prato acima é o resultado do trabalho do chef Thiago",
-      "imagem": "https://www.nidelins.com.br/wp-content/uploads/2015/12/blog-mestre-cuca3.jpg",
-      "id": "gTfS5rN"
+      "nome": "Risoto de Camarão e Aspargos",
+      "preco": "250",
+      "caracteristicas": "serve duas pessoas",
+      "descricao": "Em uma panela, ferva 5 xícaras (chá) de água, coloque o MAGGI Meu Segredo e mantenha em fogo baixo (fervendo) com panela tampada. Em um recipiente tempere o camarão com a pimenta- do- reino e as raspas da casca de limão. Aqueça uma panela de fundo largo com metade do azeite e refogue os camarões temperados. Retire e reserve- os juntamente com o caldo formado com o refogado. Na mesma panela coloque o restante do azeite e refogue a cebola. Junte o arroz arbóreo,",
+      "imagem": "https://www.receitasnestle.com.br/images/default-source/recipes/risotocamarao.jpg",
+      "id": "1"
+    },
+    {
+      "nome": "Spagheti Bolognesa",
+      "preco": "98",
+      "caracteristicas": "Agradeça a Deus antes de comer",
+      "descricao": "Espaguete ou esparguete ou macarronete é uma pasta alimentícia desidratada e dura à base de sêmola de trigo, consumida sob a forma de fios. Há vários tipos de espaguete conforme o seu diâmetro. ",
+      "imagem": "https://ya-restaurant.com/gik555/2017/07/spaghetti-bolognese1.jpg",
+      "id": "5"
+    },
+    {
+      "nome": "Spaghetti à Napolitana",
+      "preco": "98",
+      "caracteristicas": "Serve 3 pessoas",
+      "descricao": "Cozinhe o macarrão em água, com sal e um fio de óleo até ficar al dente. Reserve.Cozinhe o macarrão em água, com sal e um fio de óleo até ficar al dente. Reserve.",
+      "imagem": "https://img.cybercook.com.br/imagens/receitas/834/spaghetti-a-napolitana-623x350.jpg",
+      "id": "4"
+    }
+  ],
+  "carnes": [
+    {
+      "nome": "Costelinha de porco a Brasileira",
+      "preco": "204",
+      "caracteristicas": "Serve 4",
+      "descricao": "Vc só pos comida boa ai Precisa também por comida ruim...",
+      "imagem": "https://portal-amb-imgs.clubedaana.com.br/2018/11/Costelinha-de-porco-agridoce.jpg",
+      "id": "1"
+    },
+    {
+      "nome": "Costelinha de porco agridoce",
+      "preco": "150",
+      "caracteristicas": "Serve 3",
+      "descricao": "Na prática, os pontos da carne de boi podem ser facilmente identificados após boa experiência em lidar com carnes assadas. Ao cortar uma carne, se você observar que ela possui uma cor rosada e uma boa quantidade de suco vermelho, ela estará mal passada. Caso a coloração interna esteja levemente rosada na parte central e a quantidade de suco seja bem menor e na cor rosada, a carne estará ao ponto. Mas se ela estiver praticamente sem suco e com uma coloração mais escura, uniforme em toda a camada da carne (da superfície até a parte central), ela estará bem passada..",
+      "imagem": "https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia11022/slide/coccao-carne-bovina1-cursos-cpt.jpg",
+      "id": "2"
+    },
+    {
+      "nome": "Carré de cordeiro",
+      "preco": "100",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "O carré de cordeiro é sempre uma ótima opção para quando você quer preparar um prato sofisticado para uma ocasião especial. Trata-se de um corte do lombinho do cordeiro, uma carne macia que inclui também o osso. No TudoReceitas.com ensinamos você a preparar carré de cordeiro no forno com alecrim, confira já os ingredientes e o preparo!",
+      "imagem": "https://t1.rg.ltmcdn.com/pt/images/7/9/6/img_carre_de_cordeiro_no_forno_2697_orig.jpg",
+      "id": "3"
+    },
+    {
+      "nome": "Canard en Fête:",
+      "preco": "134",
+      "caracteristicas": "Serve uma família",
+      "descricao": "Seguindo as tradições francesas, a Brasserie des Arts traz para seus clientes a partir do dia 13 de março, um festival de pratos com pato, elaborado pelo chef Luciano Gama. O destaque do cardápio é um dos pratos preferidos dos franceses, o Magret de Pato ao molho de Laranja, peito de pato crocante por fora e rosado por dentro acompanhado de molho adocicado de laranja",
+      "imagem": "https://jantinhadehoje.com.br/wp-content/uploads/2017/03/img_2791.jpg",
+      "id": "4"
+    },
+    {
+      "nome": " Pernil com Molho de Abacaxi",
+      "preco": "165",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "Misture o suco de abacaxi, o azeite, a água, o alho picado, a cebola ralada, o gengibre e a pimenta biquinho e o suco concentrado de abacaxi.",
+      "imagem": "https://img.cybercook.com.br/receitas/999/pernil-com-molho-de-abacaxi-1-623x350.jpeg",
+      "id": "5"
+    }
+  ],
+  "peixes": [
+    {
+      "nome": " Salmão Assado",
+      "preco": "120",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "Esse prato é muito bom e vc devia comê-lo de joelhos",
+      "imagem": "https://img.cybercook.com.br/receitas/749/salmao-assado-2.jpeg",
+      "id": "1"
+    },
+    {
+      "nome": "Peixe assado na cerveja",
+      "preco": "117",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "Aprenda com o Guia da Cozinha a fazer um Peixe assado na cerveja e deixe as suas refeições ainda mais deliciosas. Clique aqui e confira!Aprenda com o Guia da Cozinha a fazer um Peixe assado na cerveja e deixe as suas refeições ainda mais deliciosas. Clique aqui e confira!",
+      "imagem": "https://i.pinimg.com/originals/a5/29/26/a529260daf578e23489f7c1688819cf8.jpg",
+      "id": "2"
+    },
+    {
+      "nome": " Amazônia Press Peixe no Prato",
+      "preco": "150",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "A primeira edição do Programa Peixe no Prato acontece, nessa sexta-feira (01), na área externa da Escola Estadual Letícia de Campos, localizada na rua Canário, no bairro Cidade de Deus, Comunidade Fazendinha, na zona norte de Manaus, a partir das 7 horas.",
+      "imagem": "https://amazoniapress.com.br/wp-content/uploads/2019/10/programa-peixe-prato.jpg",
+      "id": "3"
+    },
+    {
+      "nome": "Paella",
+      "preco": "160",
+      "caracteristicas": "Serve duas pessoas",
+      "descricao": "Paella é um prato Espanhol de arroz, que se tornou muito popular e é conhecida em todo o mundo. Originou-se nos campos de uma região chamada Valência, no leste da Espanha.  Veja mais receitas em: Paella - Receitas de Mãe https://www.receitasdemae.com.br/receitas/paella-ou-paeja/#ixzz6LadxYc1V",
+      "imagem": "https://www.receitasdemae.com.br/wp-content/uploads/2012/11/paella.jpg",
+      "id": "4"
+    },
+    {
+      "nome": "Paella Minasu",
+      "preco": "128",
+      "caracteristicas": "serve 4 pessoas",
+      "descricao": "ESTE PRATO FOI FEITO NA CIDADE DE BETIM EM ESPECIAL AO DIA DAS MÃES,POIS ELE LEVA TODOS INGREDIENTES MINEIROS DO TIPO ORO PRO NOBIS,COUVE",
+      "imagem": "https://http2.mlstatic.com/tacho-beira-baixa-para-paeja-paella-minasul-n24-D_NQ_NP_714492-MLB27201625896_042018-F.jpg",
+      "id": "5"
+    }
+  ],
+  "bebidas": [
+    {
+      "nome": "VINHO CASA SILVA",
+      "preco": "117",
+      "caracteristicas": "VIOGINER",
+      "descricao": "Para começar não posso deixar de dizer que um dos motivos que você têm e necessita de experiementar o Vinho Casa Silva é relevante a sua origem. Ele é um charmoso vinho chileno.",
+      "imagem": "https://blog.bancadoramon.com.br/wp-content/uploads/2017/04/CASA-SILVA-VIOGNIER-RESERVA-2010.jpg",
+      "id": "1"
+    },
+    {
+      "nome": "Brunello di Montalcino",
+      "preco": "2335",
+      "caracteristicas": "Beba com alguma moderação",
+      "descricao": "Brunello di Montalcino DOCG 2012 BIONDI SANTI  Código 30856   Produtor  Biondi Santi    País  Itália    Região  Toscana    Safra  2012    Tipo  Tinto    Uva  Sangiovese 100%    Volume  750ml  DESCRIÇÃO De incrível reputação e prestígio, Biondi Santi é o mais tradicional e aristocrático nome de Montalcino, o criador dos famosos Brunello di Montalcino há mais de um século. Este belo exemplar foi apontado pelo Gambero Rosso como o melhor Brunello da safra de 2003, coroado com os cobiçados \"3 bicchieri\". Mostra o bouquet clássico do Brunello Biondi Santi, com frutas escuras e especiarias. Na boca é amplo e potente, austero, no estilo mais tradicional possível. Um verdadeiro monumento ao vinho da Toscana.",
+      "imagem": "https://4fcb41758caaadb2.cdn.gocache.net/products/30856/img_m_30856.png",
+      "id": "2"
+    },
+    {
+      "nome": "Vinho Francês Cuvee Latour",
+      "preco": "231",
+      "caracteristicas": "Uva pinot noir",
+      "descricao": "Acompanha Bruschetta de shimeji com queijo cremoso, carnes escuras como pato assado, filé mignon grelhado com espaguete na manteiga.",
+      "imagem": "https://www.oemporio.com.br/produtos/fotos/latour%20rouge%20vigna_r1_c1.jpg",
+      "id": "3"
+    },
+    {
+      "nome": "Vinho Marcus James",
+      "preco": "30",
+      "caracteristicas": "Merlot Demi-Sec 750 mL",
+      "descricao": "\"Elaborado pela variedade de uva Merlot, o Marcus James Merlot Demi-Sec possui em seu visual uma coloração vermelho rubi, aromas frutados e, paladar macio, agradável e aveludado.",
+      "imagem": "https://cdn.dooca.store/197/products/fkmllreaxnqcureghdyrbw4yidhpxminlhtgjpg_1800x1800+fill_ffffff.jpg?v=1580154339",
+      "id": "4"
+    }
+  ],
+  "costumer": [
+    {
+      "name": "Olavo",
+      "request": "1",
+      "tableNumber": "1",
+      "numCostumer": "2",
+      "id": 2
+    },
+    {
+      "name": "Andressa",
+      "request": "3",
+      "tableNumber": "3",
+      "numCostumer": "3",
+      "id": 3
+    },
+    {
+      "name": "Carlos",
+      "request": "4",
+      "tableNumber": "4",
+      "numCostumer": "4",
+      "id": 4
+    }
+  ],
+  "usuario": [
+    {
+      "name": "Valmyr",
+      "office": "gerente",
+      "login": "",
+      "passoword": "1234",
+      "id": "valmyr"
+    },
+    {
+      "eu": "qwe",
+      "tu": "qwe",
+      "id": "GLoZbVT"
+    },
+    {
+      "eu": "usuarios eu",
+      "tu": "Por que não funciona",
+      "id": "PQAGYbg"
+    }
+  ],
+  "pedido": [
+    {
+      "id": "1",
+      "name": "Olavo",
+      "table": "1",
+      "pedidosFeitos": [
+        {
+          "nome": "Costelinha de porco a Brasileira",
+          "preco": "204",
+          "caracteristicas": "Serve 4",
+          "descricao": "Vc só pos comida boa ai Precisa também por comida ruim...",
+          "imagem": "https://portal-amb-imgs.clubedaana.com.br/2018/11/Costelinha-de-porco-agridoce.jpg",
+          "id": "1"
+        }
+      ],
+      "valorTotal": 204
+    },
+    {
+      "id": "3",
+      "name": "Andressa",
+      "table": "3",
+      "pedidosFeitos": [
+        {
+          "nome": "Costelinha de porco agridoce",
+          "preco": "150",
+          "caracteristicas": "Serve 3",
+          "descricao": "Na prática, os pontos da carne de boi podem ser facilmente identificados após boa experiência em lidar com carnes assadas. Ao cortar uma carne, se você observar que ela possui uma cor rosada e uma boa quantidade de suco vermelho, ela estará mal passada. Caso a coloração interna esteja levemente rosada na parte central e a quantidade de suco seja bem menor e na cor rosada, a carne estará ao ponto. Mas se ela estiver praticamente sem suco e com uma coloração mais escura, uniforme em toda a camada da carne (da superfície até a parte central), ela estará bem passada..",
+          "imagem": "https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia11022/slide/coccao-carne-bovina1-cursos-cpt.jpg",
+          "id": "2"
+        },
+        {
+          "nome": " Amazônia Press Peixe no Prato",
+          "preco": "150",
+          "caracteristicas": "Serve duas pessoas",
+          "descricao": "A primeira edição do Programa Peixe no Prato acontece, nessa sexta-feira (01), na área externa da Escola Estadual Letícia de Campos, localizada na rua Canário, no bairro Cidade de Deus, Comunidade Fazendinha, na zona norte de Manaus, a partir das 7 horas.",
+          "imagem": "https://amazoniapress.com.br/wp-content/uploads/2019/10/programa-peixe-prato.jpg",
+          "id": "3"
+        }
+      ],
+      "valorTotal": 300
+    },
+    {
+      "id": "4",
+      "name": "Carlos",
+      "table": "4",
+      "pedidosFeitos": [
+        {
+          "nome": " CyberCook Capeletti à napolitana",
+          "preco": "55",
+          "caracteristicas": "Serve quatro pessoas",
+          "descricao": "Cozinhe o capeletti na agua fervente mexendo de vez em quando , até ficar al dente. em uma panela refogue e cebola no azeite até murchar junte os tomates o manjericão e o sal deixe ferver por cerca de de 5 min.Adicione a mussarela , as azeitonas misture e retire do fogo . coloque o capeletti numa travessa e sirva com o molho.",
+          "imagem": "https://img.cybercook.com.br/imagens/receitas/124/capeletti-a-napolitana-623x350.jpg",
+          "id": "2"
+        }
+      ],
+      "valorTotal": 55
     }
   ]
 }
